@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import MainHeader from './components/MainHeader';
+import ImgComponent from './components/ImgComponent';
+import BtnToNaver from './components/BtnToNaver';
+import ClassState from './components/ClassState';
+import FuntionalState from './components/FuntionalState';
+import ClickBtn from './components/ClickBtn';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ClassState />
+      <FuntionalState />
+      <ClickBtn />
+      {/* <MainHeader />
+      <ImgComponent />
+      <br />
+      <BtnToNaver /> */}
     </div>
   );
 }
