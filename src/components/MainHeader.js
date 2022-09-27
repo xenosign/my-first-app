@@ -1,11 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 
-class MainHeader extends Component {
-    render() {
-        return (
-            <h1>Hello, Component world!</h1>
-        )
-    }
+function MainHeader({ userID, text, href }) {
+    return (
+        <div>
+            <h1>{userID} 님 반값습니다.</h1>
+            <a href={href}>{text}</a>
+        </div>
+
+    )
 }
 
 export default MainHeader;
