@@ -15,14 +15,24 @@ import ClassProps from './components/ClassProps';
 import ConditionalRender from './components/ConditionalRender';
 import TestRef from './components/TestRef';
 import ChangeFocus from './components/ChangeFocus';
+import PracticeOne from './components/PracticeOne';
+import PracticeTwo from './components/PracticeTwo';
 
+import { useState } from "react";
 
 
 function App() {
 
+  const [condition, setCondition] = useState("1번");
+  const onChange = () => {
+    condition === "1번" ? setCondition("2번") : setCondition("1번");
+  }
+
+
   return (
     <div className="App">
-      <ChangeFocus />
+      {condition === "1번" ? <PracticeOne text={condition} /> : <PracticeTwo text={condition} />}
+      <button onClick={onChange}>{condition}</button>
     </div>
   );
 }
