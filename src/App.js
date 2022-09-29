@@ -17,23 +17,25 @@ import TestRef from './components/TestRef';
 import ChangeFocus from './components/ChangeFocus';
 import PracticeOne from './components/PracticeOne';
 import PracticeTwo from './components/PracticeTwo';
-
-import { useState } from "react";
-
+import TestUseEffect from './components/TestUseEffect';
+import Timer from './components/Timer';
+import { useEffect, useRef, useState } from 'react';
+import Comparing from './components/Comparing';
+import PracticeTimer from './components/PracticeTimer';
 
 function App() {
+  const [show, setShow] = useState(false);
+  const btnFocus = useRef();
 
-  const [condition, setCondition] = useState("1번");
-  const onChange = () => {
-    condition === "1번" ? setCondition("2번") : setCondition("1번");
-  }
-
+  useEffect(() => {
+    btnFocus.current.focus();
+  }, []);
 
   return (
     <div className="App">
-      {condition === "1번" ? <PracticeOne text={condition} /> : <PracticeTwo text={condition} />}
-      <button onClick={onChange}>{condition}</button>
-    </div>
+      {show && <PracticeTimer />}
+      <button ref={btnFocus} onClick={function () { setShow(!show) }}>{show ? "숨기기" : "보이기"}</button>
+    </div >
   );
 }
 
