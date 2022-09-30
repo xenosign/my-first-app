@@ -22,19 +22,13 @@ import Timer from './components/Timer';
 import { useEffect, useRef, useState } from 'react';
 import Comparing from './components/Comparing';
 import PracticeTimer from './components/PracticeTimer';
+import TestUseMemo from './components/TestUseMemo';
+import UsingUseMemo from './components/UsingUseMemo';
 
 function App() {
-  const [show, setShow] = useState(false);
-  const btnFocus = useRef();
-
-  useEffect(() => {
-    btnFocus.current.focus();
-  }, []);
-
   return (
     <div className="App">
-      {show && <PracticeTimer />}
-      <button ref={btnFocus} onClick={function () { setShow(!show) }}>{show ? "숨기기" : "보이기"}</button>
+      <UsingUseMemo />
     </div >
   );
 }
