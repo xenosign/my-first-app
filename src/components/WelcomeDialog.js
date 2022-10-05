@@ -1,11 +1,19 @@
 import Dialog from "./Dialog";
 
-export default function WelcomeDialog() {
+export default function WelcomeDialog(props) {
   return (
     <Dialog
       color="orange"
       title="Welcome to summoner's lift"
       message="소환사의 협곡에 오신 걸 환영합니다."
-    />
+    >
+      <button
+        onClick={() => {
+          alert(props.alertMessage);
+        }}
+      >
+        {props.content}
+      </button>
+    </Dialog>
   );
 }

@@ -28,23 +28,23 @@ import Dialog from "./components/Dialog";
 import WelcomeDialog from "./components/WelcomeDialog";
 import FancyBorder from "./components/FancyBorder";
 import SignUpDialog from "./components/SignUpDialog";
-import { Route, Routes } from "react-router-dom";
 import Profile from "./components/Profile";
 import Board from "./components/Board";
 import Header from "./components/Header";
 import NotFound from "./components/NotFound";
 import BoardDetail from "./components/BoardDetail";
-
+import WelcomeDialogBtn from "./components/WelcomeDialogBtn";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Header />} />
-        <Route path="profile" element={<Profile />} />
-        <Route path="board" element={<Board />} />
-        <Route path="board/:boardID" element={<BoardDetail />} />
-        <Route path="*" element={<NotFound />} />
+                <Route path="/" element={<Header />} />
+                <Route path="profile" element={<Profile />} />
+                <Route path="board" element={<Board />} />
+                <Route path="board/:boardID" element={<BoardDetail />} />
+                <Route path="*" element={<NotFound />} />   
       </Routes>
     </div>
   );
