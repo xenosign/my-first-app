@@ -35,17 +35,20 @@ import NotFound from "./components/NotFound";
 import BoardDetail from "./components/BoardDetail";
 import WelcomeDialogBtn from "./components/WelcomeDialogBtn";
 import { Routes, Route } from "react-router-dom";
+import Image from "./components/Image";
+import Where from "./components/Where";
 
 function App() {
   return (
     <div className="App">
-      <Routes>
-                <Route path="/" element={<Header />} />
-                <Route path="profile" element={<Profile />} />
-                <Route path="board" element={<Board />} />
-                <Route path="board/:boardID" element={<BoardDetail />} />
-                <Route path="*" element={<NotFound />} />   
-      </Routes>
+      <Where />
+      {/* <Routes>
+        <Route path="/" element={<Header />} />
+        <Route path="profile" element={<Profile />} />
+        <Route path="board" element={<Board />} />
+        <Route path="board/:boardID" element={<BoardDetail />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes> */}
     </div>
   );
 }

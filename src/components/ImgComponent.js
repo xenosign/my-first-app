@@ -1,4 +1,4 @@
-import dogImg from '../dog.jpg';
+import dogImg from '../images/dog.jpg';
 import React, { Component } from "react";
 
 
